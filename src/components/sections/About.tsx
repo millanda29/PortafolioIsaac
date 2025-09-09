@@ -1,73 +1,137 @@
 "use client"
 
+import Image from "next/image"
+
 export default function About() {
-    return (
-        <section id="about" className="min-h-screen px-6 py-20 bg-background">
-            <div className="max-w-6xl mx-auto">
-                <h2 className="text-4xl font-bold text-foreground mb-12 text-center">
-                    Sobre <span className="text-primary">mí</span>
-                </h2>
+  return (
+    <section
+      id="about"
+      className="relative min-h-screen px-6 py-28 bg-background overflow-hidden"
+    >
+      {/* Fondo decorativo dinámico */}
+      <div className="absolute inset-0 pointer-events-none">
+        <div className="absolute top-0 left-1/4 w-[600px] h-[600px] bg-primary/10 rounded-full blur-3xl animate-pulse" />
+        <div className="absolute bottom-0 right-1/4 w-[500px] h-[500px] bg-accent/10 rounded-full blur-3xl animate-pulse" />
+      </div>
 
-                <div className="grid md:grid-cols-2 gap-12 items-center">
-                    {/* Imagen */}
-                    <div className="order-2 md:order-1">
-                        <div className="relative">
-                            <div className="w-full max-w-md mx-auto">
-                                <div className="bg-gradient-primary p-1 rounded-2xl">
-                                    <div className="bg-card rounded-2xl p-8 shadow-2xl">
-                                        <img
-                                            src="/test.jpg"
-                                            alt="Isaac trabajando en desarrollo"
-                                            className="w-full h-64 object-cover rounded-xl"
-                                            onError={(e) => {
-                                                e.currentTarget.src = "data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' width='400' height='300' viewBox='0 0 400 300'%3E%3Crect width='400' height='300' fill='%23f1f5f9'/%3E%3Ctext x='50%25' y='50%25' font-family='Arial' font-size='20' fill='%23475569' text-anchor='middle' dy='.3em'%3EDesarrollo Web%3C/text%3E%3C/svg%3E"
-                                            }}
-                                        />
-                                    </div>
-                                </div>
-                            </div>
-                            <div className="absolute -top-4 -right-4 w-16 h-16 bg-gradient-secondary rounded-full flex items-center justify-center text-white text-2xl shadow-lg">
-                                🚀
-                            </div>
-                        </div>
-                    </div>
+      <div className="relative max-w-7xl mx-auto">
+        {/* Header */}
+        <div className="text-center mb-20">
+          <h2 className="text-4xl md:text-6xl font-extrabold tracking-tight leading-tight">
+            Conoce <span className="text-primary">mi historia</span>
+          </h2>
+          <p className="text-muted-foreground mt-6 text-lg max-w-2xl mx-auto">
+            Un recorrido por mi perfil profesional, mis aprendizajes y mi visión
+            en el desarrollo de software.
+          </p>
+        </div>
 
-                    {/* Contenido */}
-                    <div className="order-1 md:order-2 space-y-8">
-                        {/* Información personal */}
-                        <div className="bg-card p-6 rounded-lg shadow-lg border border-border">
-                            <h3 className="text-xl font-semibold text-primary mb-4">Información Personal</h3>
-                            <div className="text-foreground space-y-3">
-                                <p><span className="font-semibold text-primary">Nombre:</span> Maikol Isaac Llanda</p>
-                                <p><span className="font-semibold text-primary">Ubicación:</span> Huatatoca, Quito, Pichincha, Ecuador</p>
-                                <p><span className="font-semibold text-primary">Celular:</span> (+593) 978624884</p>
-                                <p><span className="font-semibold text-primary">Correo:</span> maikdra@outlook.com</p>
-                                <p><span className="font-semibold text-primary">Estudios:</span> Ingeniería en Sistemas de Información (Décimo semestre - Actual)</p>
-                            </div>
-                        </div>
-
-                        {/* Resumen profesional */}
-                        <div className="bg-gradient-to-r from-accent/20 to-primary/20 p-6 rounded-lg border border-border">
-                            <h3 className="text-xl font-semibold text-primary mb-4">Mi Historia</h3>
-                            <p className="text-foreground leading-relaxed">
-                                Estudiante de Ingeniería en Sistemas de Información con sólidos conocimientos en desarrollo de software, infraestructura tecnológica y gestión de proyectos. Me especializo en aplicaciones web, móviles y distribuidas con tecnologías modernas. Comprometido con las buenas prácticas, la mejora continua y el aprendizaje permanente, busco aportar valor en entornos colaborativos, técnicos y organizacionales.
-                            </p>
-                        </div>
-
-                        {/* Estadísticas */}
-                        <div className="grid grid-cols-2 gap-4">
-                            <div className="bg-card p-4 rounded-lg text-center border border-border">
-                                <div className="text-2xl font-bold text-primary">10</div>
-                                <div className="text-sm text-muted-foreground">Semestre</div>
-                            </div>
-                            <div className="bg-card p-4 rounded-lg text-center border border-border">
-                                <div className="text-2xl font-bold text-primary">3+</div>
-                                <div className="text-sm text-muted-foreground">Años Experiencia</div>
-                            </div>
-                        </div>
-                    </div>
-                </div>
+        <div className="grid lg:grid-cols-3 gap-16 items-start">
+          {/* Columna izquierda → Foto */}
+          <div className="relative group">
+            <div className="p-[4px] bg-gradient-to-tr from-primary to-accent rounded-3xl shadow-xl">
+              <div className="bg-card rounded-3xl overflow-hidden shadow-lg transition-transform duration-500 group-hover:scale-105">
+                <Image
+                  src="/about.png"
+                  alt="Isaac trabajando en desarrollo"
+                  width={500}
+                  height={600}
+                  className="w-full h-[28rem] object-cover rounded-2xl"
+                />
+              </div>
             </div>
-        </section>
-    )
+            <div className="absolute -top-8 -right-8 w-24 h-24 bg-gradient-to-r from-primary to-accent rounded-full flex items-center justify-center text-white text-4xl shadow-lg animate-spin-slow">
+              🚀
+            </div>
+          </div>
+
+          {/* Columna central → Información personal */}
+          <div className="col-span-2 flex flex-col gap-10">
+            <div className="grid md:grid-cols-2 gap-8">
+              {/* Card de info */}
+              <div className="bg-card p-8 rounded-2xl shadow-md border border-border relative overflow-hidden hover:shadow-xl transition-all duration-500">
+                <h3 className="text-xl font-bold text-primary mb-4">
+                  Información Personal
+                </h3>
+                <ul className="space-y-2 text-foreground">
+                  <li>
+                    <span className="font-medium text-muted-foreground">
+                      <b>Nombre:</b>
+                    </span>{" "}
+                    Maikol Isaac Llanda Huatatoca
+                  </li>
+                  <li>
+                    <span className="font-medium text-muted-foreground">
+                      <b>Ubicación:</b>
+                    </span>{" "}
+                    Quito, Pichincha, Ecuador
+                  </li>
+                  <li>
+                    <span className="font-medium text-muted-foreground">
+                      <b>Celular:</b>
+                    </span>{" "}
+                    (+593) 978624884
+                  </li>
+                  <li>
+                    <span className="font-medium text-muted-foreground">
+                      <b>Correo:</b>
+                    </span>{" "}
+                    maikdra@outlook.com
+                  </li>
+                  <li>
+                    <span className="font-medium text-muted-foreground">
+                      <b>Estudios:</b>
+                    </span>{" "}
+                    Ing. en Sistemas de Información (10mo semestre)
+                  </li>
+                </ul>
+              </div>
+
+              {/* Card de historia */}
+              <div className="bg-gradient-to-br from-primary/20 to-accent/20 p-8 rounded-2xl shadow-md border border-border hover:shadow-xl transition-all duration-500 backdrop-blur">
+                <h3 className="text-xl font-bold text-primary mb-4">
+                  <b>Mi Historia</b>
+                </h3>
+                <p className="text-foreground leading-relaxed">
+                  Soy estudiante de Ingeniería en Sistemas de Información con
+                  pasión por construir soluciones digitales modernas.  
+                  Me especializo en aplicaciones web, móviles y distribuidas con
+                  tecnologías de última generación.  
+                  <br />
+                  <br />
+                  Mi enfoque está en el aprendizaje constante, las buenas
+                  prácticas y el impacto positivo en equipos y organizaciones.
+                </p>
+              </div>
+            </div>
+
+            {/* Stats destacadas */}
+            <div className="grid grid-cols-2 md:grid-cols-4 gap-8">
+              {[
+                { value: "10", label: "Semestre" },
+                //{ value: "3+", label: "Años Experiencia" },
+                { value: "15+", label: "Proyectos" },
+                { value: "∞", label: "Aprendizaje" },
+              ].map((stat, i) => (
+                <div
+                  key={i}
+                  className="bg-card p-8 rounded-2xl text-center shadow-md border border-border relative overflow-hidden hover:scale-105 hover:shadow-2xl transition-transform duration-500"
+                >
+                  <div className="absolute inset-0 bg-gradient-to-tr from-primary/5 to-accent/5 opacity-40" />
+                  <div className="relative">
+                    <div className="text-5xl font-extrabold text-primary">
+                      {stat.value}
+                    </div>
+                    <div className="mt-2 text-sm text-muted-foreground">
+                      {stat.label}
+                    </div>
+                  </div>
+                </div>
+              ))}
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+  )
 }
