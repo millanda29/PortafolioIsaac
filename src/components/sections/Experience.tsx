@@ -2,41 +2,76 @@
 
 export default function Experience() {
   const experiences = [
-    {
-      role: "Recepcionista y Servicio Técnico Básico",
-      company: 'Hostal y Piscinas "Rey de Francia"',
-      period: "2019 - 2023",
-      description:
-        "Atención al cliente en recepción, soporte técnico básico, gestión de reservas y caja registradora. Resolución de problemas menores y coordinación con el equipo técnico. ",
+    { 
+      role: "Asistente de TI y Desarrollo Web - Junior",
+      company: 'Hostal y Piscinas "Rey de Francia"', 
+      period: "2019 - 2023", 
+      description: "Durante cuatro años, brindé soporte técnico y desarrollé soluciones web para el hostal, mejorando la experiencia del cliente y optimizando procesos internos. Implementé un sistema de reservas en línea y gestioné la infraestructura tecnológica del establecimiento.", 
       icon: "🏨",
+      highlights: [
+        "Desarrollo de prototipos de sistemas de reservas y gestión hotelera",
+        "Soporte técnico a usuarios y mantenimiento de equipos",
+        "Optimización de procesos internos mediante soluciones digitales",
+        "Colaboración con el equipo para mejorar la experiencia del cliente",
+      ],
     },
     {
-      role: "Proyecto Académico – Desarrollo de Aplicación Web E-commerce",
-      company: "Universidad Central del Ecuador - 8vo semestre",
+      role: "Proyecto Académico – Desarrollo de Aplicación Web E-commerce - Junior",
+      company: "Universidad Central del Ecuador – Octavo Semestre",
       period: "2024",
       description:
-        "Diseñamos y desarrollamos una aplicación web de comercio electrónico con arquitectura cliente-servidor y despliegue en AWS (EC2) con Github Actions y Docker. Incluyó gestión de usuarios, catálogo, carrito y pasarela de pagos simulada.",
+        "En equipo de dos personas diseñamos y desarrollamos una aplicación web de comercio electrónico implementando arquitectura cliente-servidor y despliegue en AWS (EC2, S3, RDS). El sistema incluyó gestión de usuarios, catálogo de productos, carrito de compras y pasarela de pagos simulada, integrando frontend y backend con enfoque modular.",
       icon: "💻",
       highlights: [
-        "Implementación de arquitectura cliente-servidor",
-        "Despliegue en AWS con EC2, Github Actions y Docker",
-        "Integración de pasarela de pagos simulada",
+        "Arquitectura cliente-servidor con integración frontend y backend",
+        "Despliegue en AWS utilizando EC2, S3 y RDS",
+        "Implementación de catálogo, carrito de compras y pagos simulados",
+        "Uso de Git/GitHub y metodologías ágiles para gestión del proyecto",
       ],
     },
     {
-      role: "Pasante en el Instituto Académico de Idiomas",
-      company: "Universidad Central del Ecuador - Pasantía",
-      period: "May - Jul 2025",
+      role: "Pasante en Tecnologías de la Información - Junior",
+      company: "Instituto Académico de Idiomas – Universidad Central del Ecuador",
+      period: "19/05/2025 - 04/07/2025",
       description:
-        'Participé en proyectos de modelado de procesos (BPMN), diseño de red (cableado estructurado y WiFi) y desarrollo del sistema web "Permiso Docentes". Apliqué metodologías ágiles, pruebas unitarias y documentación técnica.',
+        "Participé en proyectos de modelado y optimización de procesos utilizando BPMN, así como en el diseño y mejora de infraestructura de red (cableado estructurado y redes inalámbricas). También desarrollé e implementé el sistema web 'Permiso Docentes', aplicando metodologías ágiles, integración frontend-backend y pruebas unitarias.",
       icon: "🏢",
       highlights: [
-        "Modelado de procesos con BPMN 2.0",
-        "Diseño de infraestructura de red",
-        "Desarrollo ágil con Scrum",
+        "Modelado y optimización de procesos con BPMN",
+        "Diseño de infraestructura de red (cableado estructurado y WiFi)",
+        "Desarrollo del sistema web 'Permiso Docentes'",
+        "Aplicación de metodologías ágiles, pruebas unitarias y documentación técnica",
       ],
     },
-  ]
+    {
+      role: "TravelMate – Asistente Inteligente para Viajes - SemiSenior",
+      company: "Bootcamp La Fábrica – 1ra Edición",
+      period: "05/08/2025 - 02/09/2025",
+      description:
+        "Durante el Bootcamp La Fábrica 2025 participé en el desarrollo de TravelMate, aplicación web ganadora del proyecto final. Fue desarrollada con el stack MERN e integrada con inteligencia artificial usando OpenAI GPT-4o-mini.",
+      icon: "🚀",
+      highlights: [
+        "Desarrollo fullstack con stack MERN (MongoDB, Express, React, Node.js)",
+        "Integración de IA con OpenAI para generación de itinerarios inteligentes",
+        "Implementación de chat con asistente, presupuestos y exportación de reportes PDF",
+        "Despliegue en Render y Vercel con autenticación JWT y configuración de CORS",
+      ],
+    },
+    {
+      role: "Pasante – Soporte Técnico y Help Desk (Área TICs) - SemiSenior",
+      company: "Unidad Educativa a Distancia “ARUPOS”",
+      period: "05/11/2025 - 23/01/2026",
+      description:
+        "Brindé soporte técnico de primer nivel a personal administrativo y docente, atendiendo incidencias de hardware, software y conectividad. Gestioné requerimientos bajo un esquema de mesa de ayuda realizando diagnóstico, resolución y seguimiento de cada caso.",
+      icon: "🖥️",
+      highlights: [
+        "Soporte técnico a usuarios y resolución de incidencias",
+        "Gestión de requerimientos bajo esquema de Help Desk",
+        "Mantenimiento preventivo y correctivo de equipos",
+        "Desarrollo de un prototipo de Sistema Integrado Académico (SIA)",
+      ],
+    },
+  ];
 
   return (
     <section
@@ -129,20 +164,32 @@ export default function Experience() {
             {[
               {
                 year: "2019",
-                label: "Inicio en Hostal",
+                label: "Inicio en Hostal Rey de Francia",
                 icon: "🏨",
                 color: "from-primary to-accent",
               },
               {
                 year: "2024",
-                label: "Proyecto E-commerce",
+                label: "Proyecto Web E-commerce (UCE)",
                 icon: "💻",
                 color: "from-accent to-primary",
               },
               {
                 year: "2025",
-                label: "Pasante UCE",
+                label: "Pasante TI – Instituto de Idiomas UCE",
                 icon: "🏢",
+                color: "from-primary to-accent",
+              },
+              {
+                year: "2025",
+                label: "TravelMate – Bootcamp La Fábrica",
+                icon: "🚀",
+                color: "from-accent to-primary",
+              },
+              {
+                year: "2026",
+                label: "Pasante Help Desk – ARUPOS",
+                icon: "🖥️",
                 color: "from-primary to-accent",
               },
             ].map((item, i) => (
