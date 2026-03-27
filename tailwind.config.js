@@ -38,6 +38,10 @@ export default {
                 'gradient-secondary': 'var(--gradient-secondary)',
                 'gradient-accent': 'var(--gradient-accent)',
             },
+            animation: {
+                'spin-slow': 'spin 8s linear infinite',
+                'spin-very-slow': 'spin 20s linear infinite',
+            },
         },
     },
     plugins: [],
