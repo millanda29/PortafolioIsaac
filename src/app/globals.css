@@ -1,57 +1,85 @@
 @import "tailwindcss";
 
 :root {
-  /* Colores para modo claro - Paleta mejorada para legibilidad */
-  --background: #ffffff;
-  --foreground: #0f172a;
+  /* Paleta Verde-Azul - Modo Claro */
+  --background: #fafbfc;
+  --foreground: #0a0a0b;
   --card: #ffffff;
-  --card-foreground: #0f172a;
+  --card-foreground: #0a0a0b;
   --popover: #ffffff;
-  --popover-foreground: #0f172a;
-  --primary: #3b82f6;
+  --popover-foreground: #0a0a0b;
+  --primary: #10b981;
   --primary-foreground: #ffffff;
-  --secondary: #f1f5f9;
+  --secondary: #f0fdf4;
   --secondary-foreground: #0f172a;
   --muted: #f8fafc;
-  --muted-foreground: #475569;
-  --accent: #dbeafe;
-  --accent-foreground: #1e40af;
+  --muted-foreground: #64748b;
+  --accent: #0ea5e9;
+  --accent-foreground: #ffffff;
   --destructive: #ef4444;
   --destructive-foreground: #ffffff;
   --border: #e2e8f0;
   --input: #f1f5f9;
-  --ring: #3b82f6;
+  --ring: #10b981;
   --radius: 0.75rem;
-  --gradient-primary: linear-gradient(135deg, #3b82f6 0%, #1d4ed8 100%);
-  --gradient-secondary: linear-gradient(135deg, #8b5cf6 0%, #7c3aed 100%);
-  --gradient-accent: linear-gradient(135deg, #06b6d4 0%, #0891b2 100%);
+  
+  /* Gradientes Verde-Azul */
+  --gradient-primary: linear-gradient(135deg, #10b981 0%, #06b6d4 50%, #0ea5e9 100%);
+  --gradient-secondary: linear-gradient(135deg, #14b8a6 0%, #0d9488 100%);
+  --gradient-accent: linear-gradient(135deg, #0ea5e9 0%, #3b82f6 100%);
+  --gradient-mesh: radial-gradient(at 40% 20%, hsla(160, 84%, 39%, 0.15) 0px, transparent 50%),
+                   radial-gradient(at 80% 0%, hsla(190, 95%, 39%, 0.1) 0px, transparent 50%),
+                   radial-gradient(at 0% 50%, hsla(172, 66%, 50%, 0.1) 0px, transparent 50%),
+                   radial-gradient(at 80% 50%, hsla(199, 89%, 48%, 0.1) 0px, transparent 50%),
+                   radial-gradient(at 0% 100%, hsla(160, 84%, 39%, 0.1) 0px, transparent 50%);
+  
+  /* Shadows */
+  --shadow-sm: 0 1px 2px 0 rgb(0 0 0 / 0.05);
+  --shadow-md: 0 4px 6px -1px rgb(0 0 0 / 0.1), 0 2px 4px -2px rgb(0 0 0 / 0.1);
+  --shadow-lg: 0 10px 15px -3px rgb(0 0 0 / 0.1), 0 4px 6px -4px rgb(0 0 0 / 0.1);
+  --shadow-xl: 0 20px 25px -5px rgb(0 0 0 / 0.1), 0 8px 10px -6px rgb(0 0 0 / 0.1);
+  --shadow-glow: 0 0 40px -10px var(--primary);
 }
 
 @media (prefers-color-scheme: dark) {
   :root {
-    /* Colores para modo oscuro - Paleta mejorada para legibilidad */
-    --background: #0f172a;
-    --foreground: #f8fafc;
-    --card: #1e293b;
-    --card-foreground: #f8fafc;
-    --popover: #1e293b;
-    --popover-foreground: #f8fafc;
-    --primary: #60a5fa;
-    --primary-foreground: #0f172a;
-    --secondary: #334155;
-    --secondary-foreground: #f1f5f9;
-    --muted: #475569;
-    --muted-foreground: #cbd5e1;
-    --accent: #1e40af;
-    --accent-foreground: #dbeafe;
+    /* Paleta Verde-Azul - Modo Oscuro */
+    --background: #09090b;
+    --foreground: #fafafa;
+    --card: #18181b;
+    --card-foreground: #fafafa;
+    --popover: #18181b;
+    --popover-foreground: #fafafa;
+    --primary: #34d399;
+    --primary-foreground: #022c22;
+    --secondary: #1c2a22;
+    --secondary-foreground: #fafafa;
+    --muted: #27272a;
+    --muted-foreground: #a1a1aa;
+    --accent: #38bdf8;
+    --accent-foreground: #082f49;
     --destructive: #f87171;
-    --destructive-foreground: #0f172a;
-    --border: #334155;
-    --input: #334155;
-    --ring: #60a5fa;
-    --gradient-primary: linear-gradient(135deg, #3b82f6 0%, #1d4ed8 100%);
-    --gradient-secondary: linear-gradient(135deg, #8b5cf6 0%, #7c3aed 100%);
-    --gradient-accent: linear-gradient(135deg, #06b6d4 0%, #0891b2 100%);
+    --destructive-foreground: #0f0f23;
+    --border: #27272a;
+    --input: #27272a;
+    --ring: #34d399;
+    
+    /* Gradientes modo oscuro */
+    --gradient-primary: linear-gradient(135deg, #34d399 0%, #22d3ee 50%, #38bdf8 100%);
+    --gradient-secondary: linear-gradient(135deg, #2dd4bf 0%, #14b8a6 100%);
+    --gradient-accent: linear-gradient(135deg, #38bdf8 0%, #60a5fa 100%);
+    --gradient-mesh: radial-gradient(at 40% 20%, hsla(160, 84%, 39%, 0.08) 0px, transparent 50%),
+                     radial-gradient(at 80% 0%, hsla(190, 95%, 39%, 0.06) 0px, transparent 50%),
+                     radial-gradient(at 0% 50%, hsla(172, 66%, 50%, 0.06) 0px, transparent 50%),
+                     radial-gradient(at 80% 50%, hsla(199, 89%, 48%, 0.06) 0px, transparent 50%),
+                     radial-gradient(at 0% 100%, hsla(160, 84%, 39%, 0.06) 0px, transparent 50%);
+    
+    /* Shadows modo oscuro */
+    --shadow-sm: 0 1px 2px 0 rgb(0 0 0 / 0.3);
+    --shadow-md: 0 4px 6px -1px rgb(0 0 0 / 0.4), 0 2px 4px -2px rgb(0 0 0 / 0.3);
+    --shadow-lg: 0 10px 15px -3px rgb(0 0 0 / 0.4), 0 4px 6px -4px rgb(0 0 0 / 0.3);
+    --shadow-xl: 0 20px 25px -5px rgb(0 0 0 / 0.5), 0 8px 10px -6px rgb(0 0 0 / 0.4);
+    --shadow-glow: 0 0 60px -15px var(--primary);
   }
 }
 
@@ -88,4 +116,52 @@ body {
   background-color: var(--background);
   color: var(--foreground);
   font-family: var(--font-sans), Arial, Helvetica, sans-serif;
+}
+
+/* Scrollbar personalizado */
+::-webkit-scrollbar {
+  width: 8px;
+  height: 8px;
+}
+
+::-webkit-scrollbar-track {
+  background: var(--background);
+}
+
+::-webkit-scrollbar-thumb {
+  background: var(--muted-foreground);
+  border-radius: 4px;
+}
+
+::-webkit-scrollbar-thumb:hover {
+  background: var(--primary);
+}
+
+/* Selección de texto */
+::selection {
+  background: var(--primary);
+  color: var(--primary-foreground);
+}
+
+/* Clases utilitarias globales */
+.glass {
+  background: rgba(255, 255, 255, 0.05);
+  backdrop-filter: blur(10px);
+  -webkit-backdrop-filter: blur(10px);
+  border: 1px solid rgba(255, 255, 255, 0.1);
+}
+
+.text-gradient {
+  background: var(--gradient-primary);
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+  background-clip: text;
+}
+
+.glow {
+  box-shadow: var(--shadow-glow);
+}
+
+.mesh-gradient {
+  background-image: var(--gradient-mesh);
 }
