@@ -7,39 +7,74 @@ export default function Education() {
       school: 'U.E.F "María Inmaculada"',
       year: "2019",
       description:
-        "Bachillerato en Ciencias con enfoque en matemáticas y ciencias naturales, que cimentó la base sólida de mi camino hacia la ingeniería.",
+        "Bachillerato en Ciencias con énfasis en matemáticas y ciencias naturales, base fundamental para mi formación en ingeniería y tecnología.",
       icon: "🎓",
     },
     {
       title: "Ingeniería en Sistemas de Información",
       school: "Universidad Central del Ecuador",
-      year: "Décimo semestre - Actual",
+      year: "Egresado",
       description:
-        "Carrera universitaria en progreso con especialización en desarrollo de software, bases de datos y arquitectura de sistemas.",
+        "Formación en desarrollo de software, arquitectura de sistemas, gestión de proyectos y análisis de requerimientos, aplicando metodologías ágiles y buenas prácticas de ingeniería.",
       icon: "🏛️",
+    },
+    {
+      title: "Bootcamp La Fábrica – Desarrollo Fullstack",
+      school: "Bootcamp La Fábrica",
+      year: "2025",
+      description:
+        "Programa intensivo enfocado en desarrollo web fullstack con tecnologías modernas, integración de inteligencia artificial y despliegue de aplicaciones en la nube.",
+      icon: "🚀",
+    },
+    {
+      title: "AWS Cloud Practitioner Essentials (Español LATAM)",
+      school: "Amazon Web Services (AWS)",
+      year: "dic. 2025",
+      description:
+        "Certificación introductoria a los fundamentos de Cloud Computing en AWS, cubriendo conceptos clave de infraestructura en la nube, servicios principales y buenas prácticas de arquitectura cloud.",
+      icon: "☁️",
+    },
+    {
+      title: "Getting Started with DevOps on AWS (Español LATAM)",
+      school: "Amazon Web Services (AWS)",
+      year: "mar. 2026",
+      description:
+        "Curso enfocado en prácticas DevOps en AWS, incluyendo integración continua (CI), entrega continua (CD), automatización de despliegues y uso de herramientas cloud para desarrollo moderno.",
+      icon: "⚙️",
+    },
+    {
+      title: "Microcredencial en Servicios AWS (Vista Previa)",
+      school: "Amazon Web Services (AWS)",
+      year: "mar. 2026 - mar. 2027",
+      description:
+        "Microcredencial enfocada en el uso práctico de servicios AWS para despliegue, administración y escalabilidad de aplicaciones cloud. ID de credencial: AWS05608692.",
+      icon: "🟧",
+    },
+    {
+      title: "Claude Code in Action",
+      school: "Anthropic",
+      year: "mar. 2026",
+      description:
+        "Certificación enfocada en el uso de herramientas de inteligencia artificial para desarrollo de software asistido por IA y automatización de flujos de trabajo de programación. ID de credencial: fwi2gxgzi4rp.",
+      icon: "🤖",
     },
   ]
 
   const achievements = [
-    /*{
-      icon: "📚",
-      title: "Promedio Alto",
-      text: "Mantenimiento de excelencia académica",
-    },*/
     {
-      icon: "📚",
-      title: "Programas de Aprendizaje",
-      text: "Aprendizaje de programas como Excel, Power Point, Word, etc.",
+      icon: "☁️",
+      title: "Cloud & DevOps",
+      text: "Experiencia en despliegue de aplicaciones en AWS utilizando servicios como EC2, S3 y RDS, aplicando prácticas de CI/CD y automatización.",
     },
     {
-      icon: "🏆",
-      title: "Proyectos Destacados",
-      text: "Desarrollo de aplicaciones web completas",
+      icon: "💻",
+      title: "Desarrollo Fullstack",
+      text: "Construcción de aplicaciones web completas integrando frontend y backend con arquitecturas modernas y buenas prácticas de desarrollo.",
     },
     {
-      icon: "🤝",
-      title: "Trabajo en Equipo",
-      text: "Colaboración en proyectos grupales",
+      icon: "🤖",
+      title: "Integración de IA",
+      text: "Implementación de funcionalidades basadas en inteligencia artificial en aplicaciones web, incluyendo asistentes inteligentes y generación de contenido.",
     },
   ]
 
@@ -48,7 +83,7 @@ export default function Education() {
       id="education"
       className="relative min-h-screen px-6 py-28 bg-secondary overflow-hidden"
     >
-      {/* Fondo decorativo premium */}
+      {/* Fondo decorativo */}
       <div className="absolute inset-0 pointer-events-none">
         <div className="absolute top-0 left-1/3 w-[600px] h-[600px] bg-primary/10 rounded-full blur-3xl animate-pulse" />
         <div className="absolute bottom-0 right-1/3 w-[500px] h-[500px] bg-accent/10 rounded-full blur-3xl animate-pulse" />
@@ -58,11 +93,11 @@ export default function Education() {
         {/* Header */}
         <div className="text-center mb-20">
           <h2 className="text-4xl md:text-5xl font-extrabold tracking-tight">
-            Formación <span className="text-primary">Académica</span>
+            Educación y <span className="text-primary">Certificados</span>
           </h2>
           <p className="text-muted-foreground mt-4 max-w-2xl mx-auto">
-            Un recorrido visual de mi trayectoria educativa y los logros que han
-            marcado mi camino en tecnología.
+            Formación académica y programas de especialización que han fortalecido
+            mis conocimientos en tecnología, desarrollo de software y trabajo en equipo.
           </p>
         </div>
 
