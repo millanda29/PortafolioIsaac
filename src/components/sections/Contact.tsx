@@ -32,7 +32,7 @@ export default function Contact() {
               <div className="bg-gradient-primary p-1 rounded-2xl">
                 <div className="bg-card rounded-2xl p-4 shadow-2xl">
                   <img
-                    src="/contact-image.jpg"
+                    src="/contact-image.webp"
                     alt="Isaac trabajando en su escritorio"
                     className="w-full h-64 object-cover rounded-xl transition-transform duration-500 hover:scale-105"
                     onError={(e) => {

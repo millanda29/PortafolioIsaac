@@ -5,49 +5,70 @@ import { FaGithub, FaExternalLinkAlt } from "react-icons/fa"
 type Project = {
   title: string
   description: string
-  link: string
-  demo?: string
+  repository?: string
+  link?: string
   tech: string[]
   featured?: boolean
 }
 
 const projects: Project[] = [
   {
-    title: "Portafolio Personal",
-    description: "Mi portafolio profesional creado con Next.js y TailwindCSS, diseñado para mostrar mis proyectos y habilidades de manera atractiva y moderna.",
-    link: "https://github.com/millanda29/portafolioisaac",
-    tech: ["Next.js", "Tailwind", "TypeScript", "React"],
+    title: "Landing Page para Manantial Rey de Francia",
+    description: "Landing page desarrollada con Astro y enfoque en alto rendimiento, SEO y UX, para promocionar servicios de bienestar, hospedaje y restaurante del complejo Rey de Francia.",
+    repository: "https://github.com/millanda29/rey-de-francia-landing",
+    link: "https://manantial-reydefrancia.netlify.app",
+    tech: ["Astro", "Tailwind", "JavaScript", "CSS", "SEO"],
+  },
+  {
+    title: "TravelMate Proyecto Final Bootcamp - Frontend",
+    description: "Proyecto final del bootcamp de programación frontend, desarrollado con Next.js y Tailwind CSS, demostrando habilidades en desarrollo web moderno, diseño responsivo y buenas prácticas de codificación.",
+    repository: "https://github.com/millanda29/ProyectoFinalBootcamp2025/tree/main/client",
+    link: "https://proyecto-final-bootcamp2025.vercel.app",
+    tech: ["Next.js", "Tailwind", "TypeScript", "JavaScript"],
     featured: true,
   },
   {
-    title: "Sistema E-commerce",
-    description: "Aplicación web completa de comercio electrónico con arquitectura cliente-servidor, desplegada en AWS con EC2, S3 y RDS.",
-    link: "https://github.com/millanda29/ecommerce-system",
-    tech: ["React", "Node.js", "Express", "MongoDB", "AWS"],
+    title: "TravelMate Proyecto Final Bootcamp - Backend",
+    description: "Proyecto final del bootcamp de programación backend, construido con Node.js, Express y MongoDB, demostrando habilidades en desarrollo de API RESTful, autenticación segura y manejo de datos.",
+    repository: "https://github.com/millanda29/ProyectoFinalBootcamp2025/tree/main/server",
+    link: "https://proyectofinalbootcamp2025.onrender.com/api-docs",
+    tech: ["Express", "MongoDB", "JWT", "Swagger"],
     featured: true,
   },
   {
-    title: "Sistema Permiso Docentes",
-    description: "Sistema web desarrollado durante mi pasantía en UCE para gestión de permisos docentes con integración frontend-backend.",
-    link: "https://github.com/millanda29/permiso-docentes",
-    tech: ["React", "Spring Boot", "MySQL", "BPMN"],
+    title: "Poseidon IA - Analizador de Mercado y Redes Sociales",
+    description: "Inteligencia artificial desarrollada con Python y TensorFlow para analizar tendencias de mercado y redes sociales, proporcionando insights accionables para estrategias de marketing digital.",
+    tech: ["Python", "TensorFlow", "Next.js", "FastAPI"],
   },
   {
-    title: "API RESTful",
-    description: "API escalable construida con Express y JWT para autenticación segura, con documentación completa y pruebas unitarias.",
-    link: "https://github.com/millanda29/api-rest",
-    tech: ["Express", "MongoDB", "JWT", "Postman"],
+    title: "Dragonball API RESTful",
+    description: "App Fullstack con Node.js, Express y React que ofrece una API REST para gestionar personajes, características y otros elementos de Dragonball, consumiendo la API pública de Dragonball.",
+    repository: "https://github.com/millanda29/DragonBallAPI-Back-Front",
+    tech: ["Express", "React", "Node.js", "API REST"],
   },
   {
-    title: "Gestor de Tareas",
-    description: "Aplicación web para gestión de tareas con autenticación, persistencia en MongoDB e interfaz intuitiva.",
-    link: "https://github.com/millanda29/task-manager",
+    title: "Peli+ - Plataforma para gestion de cartelera de Peliculas",
+    description: "Aplicación web desarrollada con React y Express para gestionar la cartelera de películas y elenco, permitiendo a los usuarios explorar, buscar y filtrar películas por género, fecha de estreno y popularidad.",
+    repository: "https://github.com/millanda29/GrupoY-IntegracionBackFontBD",
+    tech: ["React", "Express", "MongoDB"],
+  },
+  {
+    title: "To Do App con MERN Stack",
+    description: "Aplicación de gestión de tareas desarrollada con MongoDB, Express, React y Node.js, permitiendo a los usuarios crear, editar y eliminar tareas con una interfaz intuitiva y responsive.",
+    repository: "https://github.com/millanda29/Clase-DeployVercel",
+    link: "https://todolist-jade-phi.vercel.app",
     tech: ["React", "Node.js", "Express", "MongoDB"],
   },
   {
-    title: "Dashboard Analytics",
-    description: "Dashboard interactivo para análisis de datos con visualizaciones en tiempo real y reportes automatizados.",
-    link: "https://github.com/millanda29/dashboard-analytics",
+    title: "Gestor de Restaurante - Manantial Rey de Francia",
+    description: "Sistema de gestión para el restaurante del complejo Rey de Francia, desarrollado con Next.js y Nest.js, incluyendo módulos de gestion de inventario, control de pagos y dashboard de ventas.",
+    tech: ["Next.js", "Nest.js", "TypeScript", "PostgreSQL", "Supabase"],
+  },
+  {
+    title: "Landing Page Astro",
+    description: "Landing page desarrollada con Astro, enfocada en alto rendimiento, SEO y experiencia de usuario, para promocionar un producto o servicio específico con diseño moderno y responsivo.",
+    repository: "https://github.com/millanda29/astro-landing",
+    link: "https://landingpage-astro.netlify.app",
     tech: ["React", "D3.js", "Python", "FastAPI"],
   },
 ]
@@ -82,11 +103,11 @@ export default function Projects() {
               className="group relative bg-card rounded-2xl border border-border overflow-hidden transition-all duration-500 hover:shadow-xl hover:shadow-primary/10 hover:border-primary/30 hover:-translate-y-2"
             >
               {/* Imagen con overlay */}
-              <div className="relative h-48 md:h-56 overflow-hidden">
+              <div className="relative h-48 md:h-56 overflow-hidden rounded-t-2xl">
                 <img
-                  src={`/project-${index + 1}.jpg`}
+                  src={`/project-${index + 1}.webp`}
                   alt={project.title}
-                  className="w-full h-full object-cover transition-transform duration-500 group-hover:scale-110"
+                  className="absolute inset-0 w-full h-full object-cover transition-transform duration-500 group-hover:scale-110"
                   onError={(e) =>
                     (e.currentTarget.src =
                       "data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' width='400' height='300' viewBox='0 0 400 300'%3E%3Cdefs%3E%3ClinearGradient id='grad' x1='0%25' y1='0%25' x2='100%25' y2='100%25'%3E%3Cstop offset='0%25' style='stop-color:%236366f1;stop-opacity:0.2'/%3E%3Cstop offset='100%25' style='stop-color:%238b5cf6;stop-opacity:0.2'/%3E%3C/linearGradient%3E%3C/defs%3E%3Crect width='400' height='300' fill='url(%23grad)'/%3E%3Ctext x='50%25' y='50%25' font-family='Arial' font-size='14' fill='%236366f1' text-anchor='middle' dy='.3em'%3E" +
@@ -108,22 +129,24 @@ export default function Projects() {
 
                 {/* Botones hover */}
                 <div className="absolute inset-0 bg-black/60 opacity-0 group-hover:opacity-100 transition-opacity duration-300 flex items-center justify-center gap-4">
-                  <a
-                    href={project.link}
-                    target="_blank"
-                    rel="noopener noreferrer"
-                    className="p-3 bg-white/20 backdrop-blur-sm rounded-full text-white hover:bg-primary hover:scale-110 transition-all"
-                    aria-label="Ver código"
-                  >
-                    <FaGithub size={22} />
-                  </a>
-                  {project.demo && (
+                  {project.repository && (
                     <a
-                      href={project.demo}
+                      href={project.repository}
                       target="_blank"
                       rel="noopener noreferrer"
                       className="p-3 bg-white/20 backdrop-blur-sm rounded-full text-white hover:bg-primary hover:scale-110 transition-all"
-                      aria-label="Ver demo"
+                      aria-label="Ver repositorio en GitHub"
+                    >
+                      <FaGithub size={22} />
+                    </a>
+                  )}
+                  {project.link && (
+                    <a
+                      href={project.link}
+                      target="_blank"
+                      rel="noopener noreferrer"
+                      className="p-3 bg-white/20 backdrop-blur-sm rounded-full text-white hover:bg-primary hover:scale-110 transition-all"
+                      aria-label="Ver sitio web"
                     >
                       <FaExternalLinkAlt size={20} />
                     </a>

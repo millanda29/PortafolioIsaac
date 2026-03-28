@@ -41,7 +41,7 @@ export default function About() {
             <div className="p-[4px] bg-gradient-to-tr from-primary to-accent rounded-3xl shadow-xl">
               <div className="bg-card rounded-3xl overflow-hidden shadow-lg transition-transform duration-500 group-hover:scale-105">
                 <Image
-                  src="/about.png"
+                  src="/about.webp"
                   alt="Isaac desarrollando software"
                   width={500}
                   height={600}
