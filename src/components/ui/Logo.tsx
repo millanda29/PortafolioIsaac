@@ -28,7 +28,7 @@ export default function Logo({ size = 'md', showText = true, className = '', use
             <div className={`${sizeClasses[size]} bg-gradient-primary rounded-lg flex items-center justify-center text-white font-bold  overflow-hidden`}>
                 {useImage ? (
                     <img
-                        src="/icon.png"
+                        src="/icon.webp"
                         alt="Isaac Llanda Logo"
                         className="w-full h-full object-contain filter drop-shadow-[0_4px_12px_rgba(255,255,255,0.6)]"
                         onError={(e) => {
